@@ -14,5 +14,5 @@ Issues:
 
 TODO: 
 - Rewrite code in C++ to compile for Pico
-- Implement multiple Gauge faces for different vlaues and styles of gauges
+- Implement multiple Gauge faces for different values and styles of gauges
 
