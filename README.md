@@ -1,6 +1,6 @@
 # PicoCANGauge
 Inital version uses circuitpython as a proof of concept.
-Car is running a Haltech Elite 1500 ECU, [CAN protocal] [https://www.ptmotorsport.com.au/wp-content/uploads/2022/09/Haltech-CAN-Broadcast-Protocol-V2.35.0-1.pdf]
+Car is running a Haltech Elite 1500 ECU, [CAN protocal](https://www.ptmotorsport.com.au/wp-content/uploads/2022/09/Haltech-CAN-Broadcast-Protocol-V2.35.0-1.pdf)
 
 Hardware:
 - Raspberry Pi Pico
