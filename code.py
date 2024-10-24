@@ -71,26 +71,6 @@ display.root_group = main
 for dial in dials:
     main.append(dial)
 
-def create_labels(display):
-    colors = [0xFF0000, 0x00FF00, 0x0000FF, 0xFFFF00]
-    label_positions = [(80, 100), (180, 100), (80, 180), (180, 180)]
-    text_label_strings = ["MAP", "TPS", "AFR", "RPM"]
-
-    text_labels = []
-    for i in range(4):
-        text_label = label.Label(
-            terminalio.FONT,
-            text=text_label_strings[i],
-            color=colors[i],
-            anchor_point=(0.5, 0.5),
-            anchored_position=label_positions[i],
-            scale=TEXT_SCALE,
-        )
-        text_labels.append(text_label)
-        main.append(text_label)
-
-    return text_labels
-
 def update_dials(values):
     # create_labels(display)
     for i, value in enumerate(values):
