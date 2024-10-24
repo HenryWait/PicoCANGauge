@@ -1,0 +1,412 @@
+# Haltech CAN Broadcast Protocol (V2.35.0)
+# The Haltech CAN bus operates at 1MBit and uses 11-bit IDs
+# List of channels with their corresponding CAN IDs, message position, units, and conversions
+BAUDRATE = 1000000
+
+[channel]
+
+[channel.rpm]
+can_id = 0x360
+rate = 0.02
+message_position = [ 0, 1 ]
+units = "RPM"
+conversion = "y = x"
+
+[channel.manifold_pressure]
+can_id = 0x360
+rate = 0.02
+message_position = [ 2, 3 ]
+units = "kPa"
+conversion = "y = x / 10"
+
+[channel.throttle_position]
+can_id = 0x360
+rate = 0.02
+message_position = [ 4, 5 ]
+units = "%"
+conversion = "y = x / 10"
+
+[channel.coolant_pressure]
+can_id = 0x360
+rate = 0.02
+message_position = [ 6, 7 ]
+units = "kPa"
+conversion = "y = (x / 10) - 101.3"
+
+[channel.fuel_pressure]
+can_id = 0x361
+rate = 0.02
+message_position = [ 0, 1 ]
+units = "kPa"
+conversion = "y = (x / 10) - 101.3"
+
+[channel.oil_pressure]
+can_id = 0x361
+rate = 0.02
+message_position = [ 2, 3 ]
+units = "kPa"
+conversion = "y = (x / 10) - 101.3"
+
+[channel.engine_demand]
+can_id = 0x361
+rate = 0.02
+message_position = [ 4, 5 ]
+units = "%"
+conversion = "y = x / 10"
+
+[channel.wastegate_pressure]
+can_id = 0x361
+rate = 0.02
+message_position = [ 6, 7 ]
+units = "kPa"
+conversion = "y = (x / 10) - 101.3"
+
+[channel.injection_stage_1_duty_cycle]
+can_id = 0x362
+rate = 0.02
+message_position = [ 0, 1 ]
+units = "%"
+conversion = "y = x / 10"
+
+[channel.injection_stage_2_duty_cycle]
+can_id = 0x362
+rate = 0.02
+message_position = [ 2, 3 ]
+units = "%"
+conversion = "y = x / 10"
+
+[channel.ignition_angle]
+can_id = 0x362
+rate = 0.02
+message_position = [ 4, 5 ]
+units = "°"
+conversion = "y = x / 10"
+
+[channel.wheel_slip]
+can_id = 0x363
+rate = 0.05
+message_position = [ 0, 1 ]
+units = "km/h"
+conversion = "y = x / 10"
+
+[channel.wheel_diff]
+can_id = 0x363
+rate = 0.05
+message_position = [ 2, 3 ]
+units = "km/h"
+conversion = "y = x / 10"
+
+[channel.wideband_sensor_1]
+can_id = 0x368
+rate = 0.05
+message_position = [ 0, 1 ]
+units = "λ"
+conversion = "y = x / 1000"
+
+[channel.wideband_sensor_2]
+can_id = 0x368
+rate = 0.05
+message_position = [ 2, 3 ]
+units = "λ"
+conversion = "y = x / 1000"
+
+[channel.wideband_sensor_3]
+can_id = 0x368
+rate = 0.05
+message_position = [ 4, 5 ]
+units = "λ"
+conversion = "y = x / 1000"
+
+[channel.wideband_sensor_4]
+can_id = 0x368
+rate = 0.05
+message_position = [ 6, 7 ]
+units = "λ"
+conversion = "y = x / 1000"
+
+[channel.trigger_error_count]
+can_id = 0x369
+rate = 0.05
+message_position = [ 0, 1 ]
+units = "raw"
+conversion = "y = x"
+
+[channel.trigger_counter]
+can_id = 0x369
+rate = 0.05
+message_position = [ 2, 3 ]
+units = "raw"
+conversion = "y = x"
+
+[channel.trigger_sync_level]
+can_id = 0x369
+rate = 0.05
+message_position = [ 6, 7 ]
+units = "raw"
+conversion = "y = x"
+
+[channel.knock_level_1]
+can_id = 0x36a
+rate = 0.05
+message_position = [ 0, 1 ]
+units = "dB"
+conversion = "y = x / 1000"
+
+[channel.knock_level_2]
+can_id = 0x36a
+rate = 0.05
+message_position = [ 2, 3 ]
+units = "dB"
+conversion = "y = x / 1000"
+
+[channel.brake_pressure]
+can_id = 0x36b
+rate = 0.05
+message_position = [ 0, 1 ]
+units = "kPa"
+conversion = "y = x - 101.3"
+
+[channel.nos_pressure_1]
+can_id = 0x36b
+rate = 0.05
+message_position = [ 2, 3 ]
+units = "kPa"
+conversion = "y = x * 11 / 50 - 101.3"
+
+[channel.turbo_speed_1]
+can_id = 0x36b
+rate = 0.05
+message_position = [ 4, 5 ]
+units = "RPM"
+conversion = "y = x * 10"
+
+[channel.lateral_g]
+can_id = 0x36b
+rate = 0.05
+message_position = [ 6, 7 ]
+units = "m/s2"
+conversion = "y = x / 10"
+
+[channel.wheel_speed_front_left]
+can_id = 0x36d
+rate = 0.05
+message_position = [ 0, 1 ]
+units = "km/h"
+conversion = "y = x / 10"
+
+[channel.wheel_speed_front_right]
+can_id = 0x36d
+rate = 0.05
+message_position = [ 2, 3 ]
+units = "km/h"
+conversion = "y = x / 10"
+
+[channel.wheel_speed_rear_left]
+can_id = 0x36d
+rate = 0.05
+message_position = [ 4, 5 ]
+units = "km/h"
+conversion = "y = x / 10"
+
+[channel.wheel_speed_rear_right]
+can_id = 0x36d
+rate = 0.05
+message_position = [ 6, 7 ]
+units = "km/h"
+conversion = "y = x / 10"
+
+[channel.exhaust_cam_angle_1]
+can_id = 0x36d
+rate = 0.05
+message_position = [ 4, 5 ]
+units = "°"
+conversion = "y = x / 10"
+
+[channel.exhaust_cam_angle_2]
+can_id = 0x36d
+rate = 0.05
+message_position = [ 6, 7 ]
+units = "°"
+conversion = "y = x / 10"
+
+[channel.engine_limiting_active]
+can_id = 0x36e
+rate = 0.05
+message_position = [ 0, 1 ]
+units = "raw"
+conversion = "y: = 0=Off, 1=On"
+
+[channel.launch_control_ignition_retard]
+can_id = 0x36e
+rate = 0.05
+message_position = [ 2, 3 ]
+units = "°"
+conversion = "y = x / 10"
+
+[channel.launch_control_fuel_enrich]
+can_id = 0x36e
+rate = 0.05
+message_position = [ 4, 5 ]
+units = "%"
+conversion = "y = x / 10"
+
+[channel.longitudinal_g]
+can_id = 0x36e
+rate = 0.05
+message_position = [ 6, 7 ]
+units = "m/s2"
+conversion = "y = x / 10"
+
+[channel.generic_output_1_duty_cycle]
+can_id = 0x36f
+rate = 0.05
+message_position = [ 0, 1 ]
+units = "%"
+conversion = "y = x / 10"
+
+[channel.boost_control_output]
+can_id = 0x36f
+rate = 0.05
+message_position = [ 2, 3 ]
+units = "%"
+conversion = "y = x / 10"
+
+[channel.vehicle_speed]
+can_id = 0x370
+rate = 0.05
+message_position = [ 0, 1 ]
+units = "km/h"
+conversion = "y = x / 10"
+
+[channel.intake_cam_angle_1]
+can_id = 0x370
+rate = 0.05
+message_position = [ 4, 5 ]
+units = "°"
+conversion = "y = x / 10"
+
+[channel.intake_cam_angle_2]
+can_id = 0x370
+rate = 0.05
+message_position = [ 6, 7 ]
+units = "°"
+conversion = "y = x / 10"
+
+[channel.fuel_flow]
+can_id = 0x371
+rate = 0.1
+message_position = [ 0, 1 ]
+units = "cc/min"
+conversion = "y = x"
+
+[channel.fuel_flow_return]
+can_id = 0x371
+rate = 0.1
+message_position = [ 2, 3 ]
+units = "cc/min"
+conversion = "y = x"
+
+[channel.battery_voltage]
+can_id = 0x372
+rate = 0.1
+message_position = [ 0, 1 ]
+units = "Volts"
+conversion = "y = x / 10"
+
+[channel.target_boost_level]
+can_id = 0x372
+rate = 0.1
+message_position = [ 4, 5 ]
+units = "kPa"
+conversion = "y = x / 10"
+
+[channel.barometic_pressure]
+can_id = 0x372
+rate = 0.1
+message_position = [ 6, 7 ]
+units = "kPa (Abs)"
+conversion = "y = x / 10"
+
+[channel.egt_sensor_1]
+can_id = 0x373
+rate = 0.1
+message_position = [ 0, 1 ]
+units = "K"
+conversion = "y = x / 10"
+
+[channel.egt_sensor_2]
+can_id = 0x373
+rate = 0.1
+message_position = [ 2, 3 ]
+units = "K"
+conversion = "y = x / 10"
+
+[channel.egt_sensor_3]
+can_id = 0x373
+rate = 0.1
+message_position = [ 4, 5 ]
+units = "K"
+conversion = "y = x / 10"
+
+[channel.egt_sensor_4]
+can_id = 0x373
+rate = 0.1
+message_position = [ 6, 7 ]
+units = "K"
+conversion = "y = x / 10"
+
+[channel.egt_sensor_5]
+can_id = 0x374
+rate = 0.1
+message_position = [ 0, 1 ]
+units = "K"
+conversion = "y = x / 10"
+
+[channel.egt_sensor_6]
+can_id = 0x374
+rate = 0.1
+message_position = [ 2, 3 ]
+units = "K"
+conversion = "y = x / 10"
+
+[channel.egt_sensor_7]
+can_id = 0x374
+rate = 0.1
+message_position = [ 4, 5 ]
+units = "K"
+conversion = "y = x / 10"
+
+[channel.egt_sensor_8]
+can_id = 0x374
+rate = 0.1
+message_position = [ 6, 7 ]
+units = "K"
+conversion = "y = x / 10"
+
+[channel.egt_sensor_9]
+can_id = 0x375
+rate = 0.1
+message_position = [ 0, 1 ]
+units = "K"
+conversion = "y = x / 10"
+
+[channel.egt_sensor_10]
+can_id = 0x375
+rate = 0.1
+message_position = [ 2, 3 ]
+units = "K"
+conversion = "y = x / 10"
+
+[channel.egt_sensor_11]
+can_id = 0x375
+rate = 0.1
+message_position = [ 4, 5 ]
+units = "K"
+conversion = "y = x / 10"
+
+[channel.egt_sensor_12]
+can_id = 0x375
+rate = 0.1
+message_position = [ 6, 7 ]
+units = "K"
+conversion = "y = x / 10"

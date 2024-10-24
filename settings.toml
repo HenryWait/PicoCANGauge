@@ -1,0 +1,23 @@
+BRIGHTNESS = 1
+TEXT_SCALE = 3
+REFRESH_RATE = 30
+
+# GAUGE 1
+GAUGE1_CHANNEL = "channel.throttle_position"
+GAUGE1_MIN = 0
+GAUGE1_MAX = 100
+
+# GAUGE 2
+GAUGE2_CHANNEL = "channel.manifold_pressure"
+GAUGE2_MIN = -70    
+GAUGE2_MAX = 0
+
+# GAUGE 3
+GAUGE3_CHANNEL = "channel.wideband_sensor_1"
+GAUGE3_MIN = 0
+GAUGE3_MAX = 2
+
+# GAUGE 4
+GAUGE4_CHANNEL = "channel.rpm"
+GAUGE4_MIN = 0
+GAUGE4_MAX = 7000
